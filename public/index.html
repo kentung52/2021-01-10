@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crown Clothing</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/" class="logo-container">
+        <img src='./img/hats/tku.png' style= width:5rem;height:5rem; />
+      </a>
+      <div class="options">
+        <a href=" " class="option">208410190</a>
+        <a href=" https://kentung52.github.io/10810502/" class="option">早期Navbar作品</a>
+      <a href=" https://kentung52.github.io/1091-p1-classdemo/" class="option">卡片查尋器</a>
+      <a href=" https://kentung52.github.io/one-project/." class="option">第一次實作網頁</a>
+        <div class="cart-icon" onclick="cartToggle()">
+          <img class="shopping-icon" src="./img/hats/資安.jfif" alt="" />
+        </div>
+        <div class="cart-dropdown">
+          <div class="cart-items">
+            <div class="cart-item">
+              <img src="./img/hats/資安.jfif" alt="item" />
+              <div class="item-details">
+                <span class="name">努力學習</span>
+                
+              </div>
+            </div>
+            <div class="cart-item">
+              <img src="./img/hats/資安.jfif" alt="item" />
+              <div class="item-details">
+                <span class="name">精進自我</span>
+                
+              </div>
+            </div>
+            <div class="cart-item">
+              <img src="./img/hats/資安.jfif" alt="item" />
+              <div class="item-details">
+                <span class="name">克服困難</span>
+               
+              </div>
+            </div>
+            <div class="cart-item">
+              <img src="./img/hats/資安.jfif" alt="item" />
+              <div class="item-details">
+                <span class="name">鑽研興趣</span>
+               
+              </div>
+            </div>
+            <div class="cart-item">
+              <img src="./img/hats/資安.jfif" alt="item" />
+              <div class="item-details">
+                <span class="name">未來職業:資安工程師</span>
+               
+              </div>
+            </div>
+            <div class="total"></div>
+          </div>
+
+          <button class="custom-button">MY PROJECT</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage">
+      <div class="directory-menu">
+        <div class="menu-item">
+          <img
+            class="background-image"
+            src="./img/hats/程式碼.jfif"
+            alt=""
+          />
+          <a href="./hats.html" class="content">
+            <h1 class="title">作品集</h1>
+            
+          </a>
+        </div>
+        <div class="menu-item">
+          <img
+            class="background-image"
+            src="./img/hats/gg.png"
+            alt=""
+          />
+          <a href="./jackets.html" class="content">
+            <h1 class="title">學習心得</h1>
+            <span class="subtitle"></span>
+          </a>
+        </div>
+       
+      </div>
+    </div>
+
+    <script>
+      function cartToggle() {
+        p = document.querySelector('.cart-dropdown');
+        p.classList.toggle('show');
+      }
+    </script>
+  </body>
+</html>

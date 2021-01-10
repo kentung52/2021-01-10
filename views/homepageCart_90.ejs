@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/" class="logo-container">
+        <img src='./img/hats/tku.png' style= width:4rem;height:4rem; />
+      </a>
+      <div class="options">
+        <a href="/overview.html" class="option">Shop</a>
+        <a href="/shop" class="option">Contact</a>
+        <a href="/signin" class="option">Logout</a>
+        <a href="#" class="option"><%= username %></a>
+        <div class="cart-icon" onclick="cartToggle()">
+          <img class="shopping-icon" src="/img/shopping-bag.svg" alt="" />
+        </div>
+        <div class="cart-dropdown">
+          <div class="cart-items">
+            <% for(let i=0; i<cartData.length; i++) { %>
+                <div class="cart-item">
+                    <img src="<%= cartData[i].localUrl %>" alt="item" />
+                    <div class="item-details">
+                      <span class="name"><%= cartData[i].productName %></span>
+                      <span class="price"><%= cartData[i].amount %> * $<%= cartData[i].price %></span>
+                    </div>
+                  </div>
+            <% } %>
+            <div class="total">Total: <%= total %> </div>
+          </div>
+
+          <button class="custom-button">GO TO CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage">
+      <div class="directory-menu">
+       <% for(let i=0; i<catData.length;i++) { %>
+        <div class=" <%= catData[i].size %> menu-item">
+          <img
+            class="background-image"
+            src="<%= catData[i].local_url %>"
+            alt=""
+          />
+          <a href="<%= catData[i].link_url %>" class="content">
+            <h1 class="title"><%= catData[i].name.toUpperCase() %></h1>
+            <span class="subtitle">SHOP NOW</span>
+          </a>
+        </div>
+       <% } %>
+      </div>
+    </div>
+
+    <script>
+      function cartToggle() {
+        p = document.querySelector('.cart-dropdown');
+        p.classList.toggle('show');
+      }
+    </script>
+  </body>
+</html>
